@@ -9,6 +9,7 @@ parts:
   chapters:
   - file: presentatie-1
   - file: presentatie-2
+  - file: basthon
 
 - caption: Voorbeelden
   numbered: true
@@ -24,7 +25,10 @@ parts:
     - file: voorbeelden/mchoice-demo
     - file: voorbeelden/opdracht-demo  
     - file: voorbeelden/uitwerkingen
-    
+  - file: top2000-selectie
+  - file: top2000-samenvatten
+  - file: bibliotheek-a.ipynb
+  
 - caption: Jupyter Book
   chapters:
   - file: jupyterbook
@@ -36,4 +40,4 @@ parts:
     - file: sphinx-extensions/sphinx-exercise
     - file: sphinx-extensions/sphinx-assessment
     - file: sphinx-extensions/sphinx-graphviz
-    - file: sphinx-extensions/sphinx-todo  
+    - file: sphinx-extensions/sphinx-todo
