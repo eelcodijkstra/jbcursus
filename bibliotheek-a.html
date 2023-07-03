@@ -1,0 +1,910 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="nl" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>5. Bibliotheek-voorbeelden (1) &#8212; JB cursus</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/assessment.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/assessment.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bibliotheek-a';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="Over Jupyter Book" href="jupyterbook.html" />
+    <link rel="prev" title="4. Groeperen en samenvatten" href="top2000-samenvatten.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welkom bij de cursus Jupyter Book (enz.)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Presentaties</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="presentatie-1.html">Presentatie 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="presentatie-2.html">Presentatie 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="presentatie-3.html">Presentatie 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basthon.html">Basthon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tweede-bijeenkomst.html">Tweede bijeenkomst</a></li>
+<li class="toctree-l1"><a class="reference internal" href="db-organisatie.html">Organisatie van het database-materiaal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Voorbeelden</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="voorbeelden/voorbeelden.html">1. Keuzethema-voorbeelden</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/3_elm-list.html">1.1. Elm: Intro Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/microbit-1b.html">1.2. Microbit les 1b</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/sqlite-2.html">1.3. Combineren van tabellen: join</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="voorbeelden/overige.html">2. Overige voorbeelden</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/sphinx-vb.html">2.2. Sphinx elementen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/mchoice-demo.html">2.3. Toetsvragen-demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/opdracht-demo.html">2.4. Opdracht-demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/uitwerkingen.html">2.5. Uitwerkingen van de opdrachten</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="top2000-selectie.html">3. Selectie en projectie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="top2000-samenvatten.html">4. Groeperen en samenvatten</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Bibliotheek-voorbeelden (1)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Jupyter Book</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="jupyterbook.html">Over Jupyter Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="sphinx-extensions/sphinx-extensions.html">Sphinx-extensies</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-extensions/sphinx-exercise.html">sphinx-exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-extensions/sphinx-assessment.html">sphinx-assessment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-extensions/sphinx-graphviz.html">sphinx-graphviz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-extensions/sphinx-todo.html">sphinx-todo</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbibliotheek-a.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bibliotheek-a.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bibliotheek-voorbeelden (1)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren-van-tabellen-join">5.1. Combineren van tabellen: JOIN</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bibliotheek-voorbeelden-1">
+<h1><span class="section-number">5. </span>Bibliotheek-voorbeelden (1)<a class="headerlink" href="#bibliotheek-voorbeelden-1" title="Permalink naar deze titel">#</a></h1>
+<p><em>Voer de onderstaande opdracht alleen uit in Jupyter; niet in Basthon.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">LOAD</span><span class="w"> </span><span class="k">data</span><span class="o">/</span><span class="n">bibliotheek</span><span class="p">.</span><span class="n">db</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We gebruiken in de volgende voorbeelden een bibliotheek-database,
+met het volgende schema:</p>
+<p><img alt="image" src="_images/bibliotheek-schema.png" /></p>
+<p><strong>Opdracht.</strong>
+Welke schrijvers zijn geboren na 1960? Geef de voornaam, tussenvoegsel, achternaam, en geboortejaar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">voornaam</span><span class="p">,</span><span class="w"> </span><span class="n">tussenvoegsel</span><span class="p">,</span><span class="w"> </span><span class="n">achternaam</span><span class="p">,</span><span class="w"> </span><span class="n">geb_jaar</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">auteurs</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">geb_jaar</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="ss">&quot;1960&quot;</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">geb_jaar</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>VOORNAAM</th>
+<th>TUSSENVOEGSEL</th>
+<th>ACHTERNAAM</th>
+<th>GEB_JAAR</th>
+</tr>
+<tr>
+<td>Manon</td>
+<td></td>
+<td>Uphoff</td>
+<td>1962</td>
+</tr>
+<tr>
+<td>Karel</td>
+<td></td>
+<td>Glastra van Loon</td>
+<td>1962</td>
+</tr>
+<tr>
+<td>Joost</td>
+<td></td>
+<td>Zwagerman</td>
+<td>1963</td>
+</tr>
+<tr>
+<td>Ronald</td>
+<td></td>
+<td>Giphart</td>
+<td>1965</td>
+</tr>
+<tr>
+<td>Hafid</td>
+<td></td>
+<td>Bouazza</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>Arnon</td>
+<td></td>
+<td>Grunberg</td>
+<td>1971</td>
+</tr>
+<tr>
+<td>Abdelkader</td>
+<td></td>
+<td>Benali</td>
+<td>1975</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>Opdracht.</strong>
+Welke boeken vallen niet in de rubriek “nederlands”? (Geef alleen de eerste 10 boeken: titel en rubriek.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">titel</span><span class="p">,</span><span class="w"> </span><span class="n">rubriek</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">boeken</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">rubriek</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="ss">&quot;nederlands&quot;</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">titel</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>TITEL</th>
+<th>RUBRIEK</th>
+</tr>
+<tr>
+<td>1984</td>
+<td>engels</td>
+</tr>
+<tr>
+<td>A Bend in the River</td>
+<td>engels</td>
+</tr>
+<tr>
+<td>A Catcher in the Rye</td>
+<td>engels</td>
+</tr>
+<tr>
+<td>A Christmas Carol</td>
+<td>engels</td>
+</tr>
+<tr>
+<td>A Prayer for Owen Meany</td>
+<td>engels</td>
+</tr>
+<tr>
+<td>A Son of the Circus</td>
+<td>engels</td>
+</tr>
+<tr>
+<td>A tale of two cities</td>
+<td>engels</td>
+</tr>
+<tr>
+<td>Animal Farm</td>
+<td>engels</td>
+</tr>
+<tr>
+<td>Computernetwerken (2e ed.)</td>
+<td>informatica</td>
+</tr>
+<tr>
+<td>Congo Journey</td>
+<td>engels</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>Opdracht.</strong>
+In welke rubrieken worden de boeken ingedeeld? Geef deze in alfabetische volgorde.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">rubriek</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">boeken</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">rubriek</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>RUBRIEK</th>
+</tr>
+<tr>
+<td>biologie</td>
+</tr>
+<tr>
+<td>duits</td>
+</tr>
+<tr>
+<td>engels</td>
+</tr>
+<tr>
+<td>frans</td>
+</tr>
+<tr>
+<td>geschiedenis</td>
+</tr>
+<tr>
+<td>informatica</td>
+</tr>
+<tr>
+<td>maatschappijleer</td>
+</tr>
+<tr>
+<td>natuurkunde</td>
+</tr>
+<tr>
+<td>nederlands</td>
+</tr>
+<tr>
+<td>scheikunde</td>
+</tr>
+</table></div></div>
+</div>
+<section id="combineren-van-tabellen-join">
+<h2><span class="section-number">5.1. </span>Combineren van tabellen: JOIN<a class="headerlink" href="#combineren-van-tabellen-join" title="Permalink naar deze titel">#</a></h2>
+<p>Met de <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - operator kun je tabellen samenvoegen tot één tabel. Voor deze gecombineerde tabel heb je dan dezelfde mogelijkheden als je gezien hebt voor queries met één tabel.</p>
+<p>De algemene vorm is:</p>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kolomnamen</span><span class="o">&gt;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">tabel1</span>
+<span class="w">     </span><span class="k">JOIN</span><span class="w"> </span><span class="n">tabel2</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">tabel1</span><span class="p">.</span><span class="n">kolomx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tabel2</span><span class="p">.</span><span class="n">kolomy</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">...</span><span class="w">     </span>
+</pre></div>
+</div>
+<p>De <code class="docutils literal notranslate"><span class="pre">ON</span></code> - term beschrijft welke kolommen moeten overeenkomen. Bijvoorbeeld: de kolom <code class="docutils literal notranslate"><span class="pre">boeken.autnr</span></code> verwijst naar de bijbehorende auteur <code class="docutils literal notranslate"><span class="pre">auteurs.auteurnr</span></code>. (Dit is een <em>foreign key</em> in de <code class="docutils literal notranslate"><span class="pre">boeken</span></code> tabel die verwijst naar de <em>primary key</em> van de tabel <code class="docutils literal notranslate"><span class="pre">auteurs</span></code>.)</p>
+<p>De <em>namen van de kolommen</em> in de gecombineerde tabel zijn ontleend aan de namen in de oorspronkelijke tabel. Om misverstanden te voorkomen kun je deze noteren als <code class="docutils literal notranslate"><span class="pre">tabelnaam.kolomnaam</span></code>, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">boeken.titel</span></code>.</p>
+<p><strong>Opmerkingen</strong></p>
+<ul class="simple">
+<li><p>Je kunt op deze manier ook meer dan 2 tabellen combineren; je krijgt er dan een <code class="docutils literal notranslate"><span class="pre">ON</span></code> term.</p></li>
+<li><p>Er zijn meerdere vormen van de JOIN-operator; daar komen we later op terug.</p></li>
+</ul>
+<p><strong>Opdracht.</strong>
+Welke boeken van Gerard Reve zijn er in de bibliotheek? (Geef titel, jaar van publicatie, en naam van de auteur.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">titel</span>
+<span class="w">     </span><span class="p">,</span><span class="w"> </span><span class="n">pub_jaar</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">JAAR</span>
+<span class="w">     </span><span class="p">,</span><span class="w"> </span><span class="n">voornaam</span><span class="p">,</span><span class="w"> </span><span class="n">achternaam</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">boeken</span>
+<span class="w">     </span><span class="k">JOIN</span><span class="w"> </span><span class="n">auteurs</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">boeken</span><span class="p">.</span><span class="n">autnr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auteurs</span><span class="p">.</span><span class="n">auteurnr</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">auteurs</span><span class="p">.</span><span class="n">voornaam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Gerard&quot;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">auteurs</span><span class="p">.</span><span class="n">achternaam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;Reve&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>TITEL</th>
+<th>JAAR</th>
+<th>VOORNAAM</th>
+<th>ACHTERNAAM</th>
+</tr>
+<tr>
+<td>De Avonden</td>
+<td>1947</td>
+<td>Gerard</td>
+<td>Reve</td>
+</tr>
+<tr>
+<td>De vierde man</td>
+<td>1981</td>
+<td>Gerard</td>
+<td>Reve</td>
+</tr>
+<tr>
+<td>Op weg naar het einde</td>
+<td>1963</td>
+<td>Gerard</td>
+<td>Reve</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>Opdracht.</strong>
+Welke leerlingen hebben een boete van meer dan 3,50 Euro gehad? (Geef voornaam, tussenvoegsel, achternaam, en boete; geef alleen de eerste 10, op alfabetische volgorde van achternaam.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">voornaam</span><span class="p">,</span><span class="w"> </span><span class="n">tussenvoegsel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">tv</span><span class="p">,</span><span class="w"> </span><span class="n">achternaam</span><span class="p">,</span><span class="w"> </span><span class="n">boete</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">leerlingen</span>
+<span class="w">     </span><span class="k">JOIN</span><span class="w"> </span><span class="n">uitleningen</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">leerlingen</span><span class="p">.</span><span class="n">llnr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uitleningen</span><span class="p">.</span><span class="n">llnr</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">boete</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">.</span><span class="mi">50</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">achternaam</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>VOORNAAM</th>
+<th>tv</th>
+<th>ACHTERNAAM</th>
+<th>BOETE</th>
+</tr>
+<tr>
+<td>Monique</td>
+<td></td>
+<td>Aalbers</td>
+<td>1.80</td>
+</tr>
+<tr>
+<td>Monique</td>
+<td></td>
+<td>Aalbers</td>
+<td>1.80</td>
+</tr>
+<tr>
+<td>Monique</td>
+<td></td>
+<td>Aalbers</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Monique</td>
+<td></td>
+<td>Aalbers</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Monique</td>
+<td></td>
+<td>Aalbers</td>
+<td>1.60</td>
+</tr>
+<tr>
+<td>Monique</td>
+<td></td>
+<td>Aalbers</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>Monique</td>
+<td></td>
+<td>Aalbers</td>
+<td>2.40</td>
+</tr>
+<tr>
+<td>Sahila</td>
+<td></td>
+<td>Abdoulai</td>
+<td>3.20</td>
+</tr>
+<tr>
+<td>Sahila</td>
+<td></td>
+<td>Abdoulai</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Sahila</td>
+<td></td>
+<td>Abdoulai</td>
+<td>2.20</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>Opdracht.</strong>
+Maak een top-5 van de leerlingen die <em>in totaal</em> het grootste bedrag aan boetes betaald hebben.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">voornaam</span><span class="p">,</span><span class="w"> </span><span class="n">tussenvoegsel</span><span class="p">,</span><span class="w"> </span><span class="n">achternaam</span><span class="p">,</span><span class="w"> </span><span class="k">sum</span><span class="p">(</span><span class="n">boete</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Totaal_boete</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">leerlingen</span>
+<span class="w">     </span><span class="k">JOIN</span><span class="w"> </span><span class="n">uitleningen</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">leerlingen</span><span class="p">.</span><span class="n">llnr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uitleningen</span><span class="p">.</span><span class="n">llnr</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">voornaam</span><span class="p">,</span><span class="w"> </span><span class="n">tussenvoegsel</span><span class="p">,</span><span class="w"> </span><span class="n">achternaam</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">totaal_boete</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>VOORNAAM</th>
+<th>TUSSENVOEGSEL</th>
+<th>ACHTERNAAM</th>
+<th>Totaal_boete</th>
+</tr>
+<tr>
+<td>Saskia</td>
+<td></td>
+<td>Onk</td>
+<td>66.2</td>
+</tr>
+<tr>
+<td>Bram</td>
+<td></td>
+<td>Polman</td>
+<td>55.4</td>
+</tr>
+<tr>
+<td>Wilma</td>
+<td></td>
+<td>Elkema</td>
+<td>37.2</td>
+</tr>
+<tr>
+<td>Fatma</td>
+<td></td>
+<td>Abdulkadir</td>
+<td>31.6</td>
+</tr>
+<tr>
+<td>Mark</td>
+<td></td>
+<td>Pullman</td>
+<td>29.0</td>
+</tr>
+</table></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "xsqlite"
+        },
+        kernelOptions: {
+            name: "xsqlite",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'xsqlite'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="top2000-samenvatten.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Groeperen en samenvatten</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="jupyterbook.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title">Over Jupyter Book</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combineren-van-tabellen-join">5.1. Combineren van tabellen: JOIN</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Eelco Dijkstra
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1377 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="nl" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Selectie en projectie &#8212; JB cursus</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/assessment.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/assessment.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'top2000-selectie';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Zoeken" href="search.html" />
+    <link rel="next" title="4. Groeperen en samenvatten" href="top2000-samenvatten.html" />
+    <link rel="prev" title="2.5. Uitwerkingen van de opdrachten" href="voorbeelden/uitwerkingen.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="nl"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welkom bij de cursus Jupyter Book (enz.)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Presentaties</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="presentatie-1.html">Presentatie 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="presentatie-2.html">Presentatie 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="presentatie-3.html">Presentatie 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basthon.html">Basthon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tweede-bijeenkomst.html">Tweede bijeenkomst</a></li>
+<li class="toctree-l1"><a class="reference internal" href="db-organisatie.html">Organisatie van het database-materiaal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Voorbeelden</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="voorbeelden/voorbeelden.html">1. Keuzethema-voorbeelden</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/3_elm-list.html">1.1. Elm: Intro Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/microbit-1b.html">1.2. Microbit les 1b</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/sqlite-2.html">1.3. Combineren van tabellen: join</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="voorbeelden/overige.html">2. Overige voorbeelden</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/sphinx-vb.html">2.2. Sphinx elementen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/mchoice-demo.html">2.3. Toetsvragen-demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/opdracht-demo.html">2.4. Opdracht-demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voorbeelden/uitwerkingen.html">2.5. Uitwerkingen van de opdrachten</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Selectie en projectie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="top2000-samenvatten.html">4. Groeperen en samenvatten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliotheek-a.html">5. Bibliotheek-voorbeelden (1)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Jupyter Book</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="jupyterbook.html">Over Jupyter Book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="sphinx-extensions/sphinx-extensions.html">Sphinx-extensies</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-extensions/sphinx-exercise.html">sphinx-exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-extensions/sphinx-assessment.html">sphinx-assessment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-extensions/sphinx-graphviz.html">sphinx-graphviz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-extensions/sphinx-todo.html">sphinx-todo</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Bronopslagplaats"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftop2000-selectie.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open een probleem"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download deze pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/top2000-selectie.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download het bronbestand"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Afdrukken naar pdf"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Volledig scherm"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Zoeken" aria-label="Zoeken" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Selectie en projectie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Inhoud </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maak-verbinding-met-de-database">3.1. Maak verbinding met de database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verken-de-tabel">3.2. Verken de tabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projectie-van-kolommen">3.3. Projectie van kolommen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selectie-van-rijen">3.4. Selectie van rijen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distinct-unieke-rijen">3.4.1. DISTINCT: unieke rijen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opmerkingen">3.5. Opmerkingen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enkele-voorbeelden">3.6. Enkele voorbeelden</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="selectie-en-projectie">
+<h1><span class="section-number">3. </span>Selectie en projectie<a class="headerlink" href="#selectie-en-projectie" title="Permalink naar deze titel">#</a></h1>
+<p>Als je het antwoord op een informatievraag zoekt in een database, dan moet je uit de gegevens in die database precies die elementen zien te vinden die antwoord geven op je vraag.
+Dit doe je met behulp van een database <em>query</em> (zoekvraag).</p>
+<p>Voor relationele databases gebruik je hiervoor de query-taal SQL (Structured Query Language).
+Een relationele database bestaat uit een aantal tabellen die onderling naar elkaar kunnen verwijzen.
+Een tabel bestaat uit rijen en kolommen.
+De eerste stap bij het zoeken is de <em>selectie van de juiste rijen</em>; daarvan geef je alleen de kolommen weer die je nodig hebt voor het resultaat (<em>projectie</em>).</p>
+<p><img alt="image" src="_images/tabel-fig.png" /></p>
+<p>Als voorbeeld-tabel gebruiken we de Top2000 van de laatste jaren.
+Deze database bestaat uit één tabel.</p>
+<section id="maak-verbinding-met-de-database">
+<h2><span class="section-number">3.1. </span>Maak verbinding met de database<a class="headerlink" href="#maak-verbinding-met-de-database" title="Permalink naar deze titel">#</a></h2>
+<p>De eerste stap is om verbinding te maken met de database.</p>
+<p><strong>Als je Basthon gebruikt.</strong> Laad het notebook tegelijk met de database (door het gebruik van de juiste URL).
+Je kunt de database ook later laden via het “File” menu.
+Zorg ervoor dat de database gekoppeld is vóór het uitvoeren van de SQL-opdrachten.</p>
+<p><strong>Als je Jupyter Notebook gebruikt.</strong> In dat geval heb je onderstaande opdracht nodig.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">LOAD</span><span class="w"> </span><span class="k">data</span><span class="o">/</span><span class="n">top2000</span><span class="p">.</span><span class="n">db</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="verken-de-tabel">
+<h2><span class="section-number">3.2. </span>Verken de tabel<a class="headerlink" href="#verken-de-tabel" title="Permalink naar deze titel">#</a></h2>
+<p>Met de volgende <em>query</em> verken je een klein stukje van de top2000-tabel.</p>
+<p>Voor de cel hieronder uit door deze te selecteren (klik in de cel); geef vervolgens Shift-Enter in, of klik op het “run” driehoekje bovenin.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>top</th>
+<th>positie</th>
+<th>titel</th>
+<th>artiest</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>2015</td>
+<td>1</td>
+<td>Imagine</td>
+<td>John Lennon</td>
+<td>1971</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>2</td>
+<td>Bohemian Rhapsody</td>
+<td>Queen</td>
+<td>1975</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>3</td>
+<td>Hotel California</td>
+<td>Eagles</td>
+<td>1977</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>4</td>
+<td>Mag Ik Dan Bij Jou</td>
+<td>Claudia De Breij</td>
+<td>2011</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>5</td>
+<td>Stairway To Heaven</td>
+<td>Led Zeppelin</td>
+<td>1971</td>
+</tr>
+</table></div></div>
+</div>
+<p>De <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> opdracht heeft de volgende basisstructuur:</p>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kolommen</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="k">FROM</span><span class="w">  </span><span class="o">&lt;</span><span class="n">invoer</span><span class="o">-</span><span class="n">tabel</span><span class="p">(</span><span class="n">len</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">rij</span><span class="o">-</span><span class="n">voorwaarde</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="o">&lt;</span><span class="n">kolommen</span><span class="o">&gt;</span><span class="w"> </span><span class="p">[</span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">]</span>
+<span class="w">  </span><span class="k">LIMIT</span><span class="w"> </span><span class="o">&lt;</span><span class="n">aantal</span><span class="w"> </span><span class="n">rijen</span><span class="o">&gt;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>Uitleg.</strong> In het voorbeeld hierboven is het <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>-deel weggelaten. Dat betekent dat de rij-voorwaarde <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> is: <em>alle rijen</em> worden geselecteerd.
+Op eenzelfde manier geeft de <code class="docutils literal notranslate"><span class="pre">*</span></code> achter <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> aan dat het resultaat <em>alle kolommen</em> bevat.</p>
+<p>De meeste onderdelen in de <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> opdracht kun je weglaten, behalve <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> en <code class="docutils literal notranslate"><span class="pre">FROM</span></code>.</p>
+<p>Het <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code>-deel beperkt het aantal rijen in het resultaat. Zowel de <code class="docutils literal notranslate"><span class="pre">*</span></code> als de <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> gebruik je vaak bij het verkennen van een database.</p>
+<p><strong>Let op:</strong> Een SQL-opdracht sluit je altijd af met een <code class="docutils literal notranslate"><span class="pre">;</span></code></p>
+<p><strong>Opdracht.</strong> Pas het aantal in het <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> deel aan, en voer de query opnieuw uit.</p>
+<p>Het <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> deel kun je de volgorde van de rijen in het resultaat bepalen; zonder sortering krijg je de volgorde van de rijen in de oorspronkelijke tabel. De resultaat-volgorde kan opklimmend zijn (<code class="docutils literal notranslate"><span class="pre">ASC</span></code>) of dalend (<code class="docutils literal notranslate"><span class="pre">DESC</span></code>). Voorbeeld:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">positie</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>top</th>
+<th>positie</th>
+<th>titel</th>
+<th>artiest</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>2015</td>
+<td>2000</td>
+<td>Bohemian Like You</td>
+<td>The Dandy Warhols</td>
+<td>2001</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>2000</td>
+<td>Politik</td>
+<td>Coldplay</td>
+<td>2002</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>2000</td>
+<td>I'm Every Woman</td>
+<td>Chaka Khan</td>
+<td>1979</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>2000</td>
+<td>Teardrops</td>
+<td>Womack & Womack</td>
+<td>1988</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>2000</td>
+<td>Suite: Judy Blue Eyes</td>
+<td>Crosby, Stills & Nash</td>
+<td>1969</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>Opdracht.</strong> Pas deze query aan zodat deze de laagste noteringen weergeeft, in plaats van de hoogste.</p>
+</section>
+<section id="projectie-van-kolommen">
+<h2><span class="section-number">3.3. </span>Projectie van kolommen<a class="headerlink" href="#projectie-van-kolommen" title="Permalink naar deze titel">#</a></h2>
+<p>Uit de bovenstaande opdracht heb je geleerd wat de <em>namen van de kolommen</em> zijn in de Top2000-tabel.
+Dit kun je gebruiken om de kolommen in het resultaat te beperken tot die kolommen die je echt nodig hebt, zie het voorbeeld hieronder.</p>
+<p>In de eerste regel, na <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>, geef je aan welke kolommen in het resultaat voorkomen, en in welke volgorde. Dit noemen we ook wel <strong>projectie</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">top</span><span class="p">,</span><span class="w"> </span><span class="n">positie</span><span class="p">,</span><span class="w"> </span><span class="n">titel</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>top</th>
+<th>positie</th>
+<th>titel</th>
+</tr>
+<tr>
+<td>2015</td>
+<td>1</td>
+<td>Imagine</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>2</td>
+<td>Bohemian Rhapsody</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>3</td>
+<td>Hotel California</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>4</td>
+<td>Mag Ik Dan Bij Jou</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>5</td>
+<td>Stairway To Heaven</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>Opdracht</strong> Pas de code hierboven aan: kies een andere combinatie van de kolommen voor het resultaat. Verander ook eens de volgorde van de kolommen; of geef de naam van een kolom tweemaal op.</p>
+<p><strong>Vraag.</strong> Heb je ook een idee van de <em>type</em>s van de kolommen? Welke kolommen bevatten getallen? Welke kolommen bevatten strings (tekenrijen)?</p>
+</section>
+<section id="selectie-van-rijen">
+<h2><span class="section-number">3.4. </span>Selectie van rijen<a class="headerlink" href="#selectie-van-rijen" title="Permalink naar deze titel">#</a></h2>
+<p>Je gebruik het <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>-deel om op te geven welke <em>rijen</em> je in het resultaat wilt zien.
+Alleen die rijen waarvoor de <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>-voorwaarde <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> is maken deel uit van het resultaat.</p>
+<p>Voorbeeld:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">artiest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Queen&#39;</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>top</th>
+<th>positie</th>
+<th>titel</th>
+<th>artiest</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>2015</td>
+<td>2</td>
+<td>Bohemian Rhapsody</td>
+<td>Queen</td>
+<td>1975</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>38</td>
+<td>Innuendo</td>
+<td>Queen</td>
+<td>1991</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>65</td>
+<td>Somebody To Love</td>
+<td>Queen</td>
+<td>1976</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>74</td>
+<td>Love Of My Life</td>
+<td>Queen</td>
+<td>1975</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>97</td>
+<td>Don't Stop Me Now</td>
+<td>Queen</td>
+<td>1979</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>Uitleg.</strong> Alleen die rijen waarvan de <code class="docutils literal notranslate"><span class="pre">artiest</span></code>-kolom de waarde <code class="docutils literal notranslate"><span class="pre">'Queen'</span></code> heeft maken deel uit van het resultaat. Merk op dat we een string-waarde in SQL tussen <code class="docutils literal notranslate"><span class="pre">'...'</span></code> weergeven.</p>
+<p><strong>Opdracht.</strong> Maak een selectie van de rijen van een andere artiest.</p>
+<p><strong>Andere operatoren.</strong> De selectie-voorwaarde kan ook andere vergelijkingsoperatoren bevatten, zoals <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> of <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> of <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> of <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> of <code class="docutils literal notranslate"><span class="pre">!=</span></code> (ongelijk). Voorbeeld:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">jaar</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1970</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>top</th>
+<th>positie</th>
+<th>titel</th>
+<th>artiest</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>2015</td>
+<td>19</td>
+<td>God Only Knows</td>
+<td>Beach Boys</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>44</td>
+<td>The Sound Of Silence</td>
+<td>Simon & Garfunkel</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>48</td>
+<td>Hey Jude</td>
+<td>Beatles</td>
+<td>1968</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>50</td>
+<td>Paint It Black</td>
+<td>Rolling Stones</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>71</td>
+<td>Pastorale</td>
+<td>Ramses Shaffy & Liesbeth List</td>
+<td>1969</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>LIKE met Jokers (wildcards)</strong>. Soms weet je niet hoe een naam (string) precies gespeld is.
+In dat geval kun je de <code class="docutils literal notranslate"><span class="pre">LIKE</span></code> operator gebruiken.
+In <code class="docutils literal notranslate"><span class="pre">LIKE</span> <span class="pre">'_an%Berg'</span></code> staat de <code class="docutils literal notranslate"><span class="pre">_</span></code> voor een willekeurig teken en <code class="docutils literal notranslate"><span class="pre">%</span></code> voor een willekeurige rij tekens (0 of meer).
+Dit past bijvoorbeeld op <code class="docutils literal notranslate"><span class="pre">'Van</span> <span class="pre">den</span> <span class="pre">Berg'</span></code>, <code class="docutils literal notranslate"><span class="pre">van</span> <span class="pre">de</span> <span class="pre">Berg</span></code>, of <code class="docutils literal notranslate"><span class="pre">van</span> <span class="pre">Berg</span></code>.</p>
+<blockquote>
+<div><p>Deze tekens komt overeen met de “wildcard” tekens <code class="docutils literal notranslate"><span class="pre">?</span></code> en <code class="docutils literal notranslate"><span class="pre">*</span></code> in bijvoorbeeld de Unix/Linux shell.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">jaar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1970</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">artiest</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%Beatles&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>top</th>
+<th>positie</th>
+<th>titel</th>
+<th>artiest</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>2015</td>
+<td>51</td>
+<td>Let It Be</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>429</td>
+<td>The Long And Winding Road</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>1680</td>
+<td>Across The Universe</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>68</td>
+<td>Let It Be</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>598</td>
+<td>The Long And Winding Road</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>79</td>
+<td>Let It Be</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>727</td>
+<td>The Long And Winding Road</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>1756</td>
+<td>Across The Universe</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>53</td>
+<td>Let It Be</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>833</td>
+<td>The Long And Winding Road</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>1832</td>
+<td>Across The Universe</td>
+<td>Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>53</td>
+<td>Let It Be</td>
+<td>The Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>704</td>
+<td>The Long And Winding Road</td>
+<td>The Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>50</td>
+<td>Let It Be</td>
+<td>The Beatles</td>
+<td>1970</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>805</td>
+<td>The Long And Winding Road</td>
+<td>The Beatles</td>
+<td>1970</td>
+</tr>
+</table></div></div>
+</div>
+<p>Je ziet aan dit resultaat dat de namen van de artiesten niet altijd op dezelfde manier geschreven zijn. Datzelfde geldt overigens ook voor de titels van de nummers. Dat maakt het lastig om met de data te werken! Later zullen we proberen om deze data meer uniform te maken.</p>
+<p><strong>Samengestelde voorwaarde.</strong> Een selectie-voorwaarde (<code class="docutils literal notranslate"><span class="pre">WHERE</span></code>-voorwaarde) kan ook samengesteld zijn, met behulp van logische <code class="docutils literal notranslate"><span class="pre">AND</span></code> en <code class="docutils literal notranslate"><span class="pre">OF</span></code> operatoren.
+Voorbeeld:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">positie</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">jaar</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1970</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>top</th>
+<th>positie</th>
+<th>titel</th>
+<th>artiest</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>2015</td>
+<td>19</td>
+<td>God Only Knows</td>
+<td>Beach Boys</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>18</td>
+<td>God Only Knows</td>
+<td>Beach Boys</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>23</td>
+<td>The Sound Of Silence</td>
+<td>Simon & Garfunkel</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>28</td>
+<td>The Sound Of Silence</td>
+<td>Simon & Garfunkel</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>29</td>
+<td>God Only Knows</td>
+<td>Beach Boys</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>26</td>
+<td>The Sound Of Silence</td>
+<td>Simon & Garfunkel</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>28</td>
+<td>The Sound Of Silence</td>
+<td>Simon & Garfunkel</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>23</td>
+<td>The Sound Of Silence</td>
+<td>Simon & Garfunkel</td>
+<td>1966</td>
+</tr>
+</table></div></div>
+</div>
+<section id="distinct-unieke-rijen">
+<h3><span class="section-number">3.4.1. </span>DISTINCT: unieke rijen<a class="headerlink" href="#distinct-unieke-rijen" title="Permalink naar deze titel">#</a></h3>
+<p>Bekijk het resultaat van de volgende opdracht:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">titel</span><span class="p">,</span><span class="w"> </span><span class="n">jaar</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">positie</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">jaar</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">1970</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>titel</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>God Only Knows</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>God Only Knows</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>The Sound Of Silence</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>The Sound Of Silence</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>God Only Knows</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>The Sound Of Silence</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>The Sound Of Silence</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>The Sound Of Silence</td>
+<td>1966</td>
+</tr>
+</table></div></div>
+</div>
+<p>Dit resultaat bevat eigenlijk 2 rijen, die beide meerdere keren voorkomen.
+Met behulp van <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">DISTINCT</span></code> vermijd je die dubbele voorkomens van eenzelfde rij:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">titel</span><span class="p">,</span><span class="w"> </span><span class="n">jaar</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">positie</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">jaar</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1970</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>titel</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>God Only Knows</td>
+<td>1966</td>
+</tr>
+<tr>
+<td>The Sound Of Silence</td>
+<td>1966</td>
+</tr>
+</table></div></div>
+</div>
+<p><strong>Vraag.</strong> In de oorspronkelijke tabel komen geen dubbele rijen voor. Waardoor krijg je die dubbele voorkomens in het vorige resultaat?</p>
+<p><strong>Tip.</strong> <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">DISTINCT</span></code> is bijvoorbeeld handig als je wilt weten welke waarden in een tabel voorkomen. Bijvoorbeeld:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">top</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>top</th>
+</tr>
+<tr>
+<td>2015</td>
+</tr>
+<tr>
+<td>2016</td>
+</tr>
+<tr>
+<td>2017</td>
+</tr>
+<tr>
+<td>2018</td>
+</tr>
+<tr>
+<td>2019</td>
+</tr>
+<tr>
+<td>2020</td>
+</tr>
+</table></div></div>
+</div>
+</section>
+</section>
+<section id="opmerkingen">
+<h2><span class="section-number">3.5. </span>Opmerkingen<a class="headerlink" href="#opmerkingen" title="Permalink naar deze titel">#</a></h2>
+<p><strong>Kolomnamen.</strong> We gebruiken hierboven een <code class="docutils literal notranslate"><span class="pre">SELECT</span></code>-opdracht met een enkele tabel.
+De kolomnamen die gebruikt worden in de selectie-voorwaarde en in de projectie moeten dan van die tabel afkomstig zijn.
+Als je meer tabellen hebt in het <code class="docutils literal notranslate"><span class="pre">FROM</span></code>-deel, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">nummers</span></code> en <code class="docutils literal notranslate"><span class="pre">artiesten</span></code>, dan gebruik je <code class="docutils literal notranslate"><span class="pre">nummers.titel</span></code> en <code class="docutils literal notranslate"><span class="pre">artiesten.naam</span></code> om precies aan te geven welke kolom je bedoelt.</p>
+</section>
+<section id="enkele-voorbeelden">
+<h2><span class="section-number">3.6. </span>Enkele voorbeelden<a class="headerlink" href="#enkele-voorbeelden" title="Permalink naar deze titel">#</a></h2>
+<p>Wat zijn de Top2000-nummers (alleen titel met artiest en jaartal) die gemaakt zijn voor 1957, gesorteerd op jaartal?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">titel</span><span class="p">,</span><span class="w"> </span><span class="n">artiest</span><span class="p">,</span><span class="w"> </span><span class="n">jaar</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">jaar</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1957</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">jaar</span><span class="p">,</span><span class="w"> </span><span class="n">titel</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>titel</th>
+<th>artiest</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>Strange Fruit</td>
+<td>Billie Holiday</td>
+<td>1939</td>
+</tr>
+<tr>
+<td>Strange Fruit</td>
+<td>Billie Holiday</td>
+<td>1939</td>
+</tr>
+<tr>
+<td>We'll Meet Again</td>
+<td>Vera Lynn</td>
+<td>1939</td>
+</tr>
+<tr>
+<td>Blue Suede Shoes</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Blue Suede Shoes</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Blue Suede Shoes</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Heartbreak Hotel</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Heartbreak Hotel</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Heartbreak Hotel</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Heartbreak Hotel</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Heartbreak Hotel</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>I've Got You Under My Skin</td>
+<td>Frank Sinatra</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>I've Got You Under My Skin</td>
+<td>Frank Sinatra</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>I've Got You Under My Skin</td>
+<td>Frank Sinatra</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>I've Got You Under My Skin</td>
+<td>Frank Sinatra</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Love Me Tender</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Love Me Tender</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Love Me Tender</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Love Me Tender</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Love Me Tender</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Love Me Tender</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+</table></div></div>
+</div>
+<p>Zoals je ziet komen sommige nummers vaker voor. Je kunt dan tellen hoe vaak een bepaald nummer in de top2000 voorkomt; of bepalen welk nummer van voor 1960 het meest populair is.</p>
+<p>Als je wilt dat elk nummer maar één keer in het resultaat voorkomt, gebruik je <code class="docutils literal notranslate"><span class="pre">DISTINCT</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">titel</span><span class="p">,</span><span class="w"> </span><span class="n">artiest</span><span class="p">,</span><span class="w"> </span><span class="n">jaar</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">top2000</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">jaar</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1957</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">jaar</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<tr>
+<th>titel</th>
+<th>artiest</th>
+<th>jaar</th>
+</tr>
+<tr>
+<td>We'll Meet Again</td>
+<td>Vera Lynn</td>
+<td>1939</td>
+</tr>
+<tr>
+<td>Strange Fruit</td>
+<td>Billie Holiday</td>
+<td>1939</td>
+</tr>
+<tr>
+<td>I've Got You Under My Skin</td>
+<td>Frank Sinatra</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Love Me Tender</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Heartbreak Hotel</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+<tr>
+<td>Blue Suede Shoes</td>
+<td>Elvis Presley</td>
+<td>1956</td>
+</tr>
+</table></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "xsqlite"
+        },
+        kernelOptions: {
+            name: "xsqlite",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'xsqlite'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="voorbeelden/uitwerkingen.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">vorige</p>
+        <p class="prev-next-title"><span class="section-number">2.5. </span>Uitwerkingen van de opdrachten</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="top2000-samenvatten.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">volgende</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Groeperen en samenvatten</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Inhoud
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maak-verbinding-met-de-database">3.1. Maak verbinding met de database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verken-de-tabel">3.2. Verken de tabel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projectie-van-kolommen">3.3. Projectie van kolommen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selectie-van-rijen">3.4. Selectie van rijen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distinct-unieke-rijen">3.4.1. DISTINCT: unieke rijen</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opmerkingen">3.5. Opmerkingen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enkele-voorbeelden">3.6. Enkele voorbeelden</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Door Eelco Dijkstra
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

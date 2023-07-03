@@ -1,0 +1,195 @@
+/*********************************************
+* Variables *
+*********************************************/
+:root {
+/*  --note-title-color: rgba(68,138,255,.1); */
+/*  --xnote-title-color: rgba(252, 248, 227, .7); */
+/*  --xnote-title-color: rgba(var(--pst-color-admonition-hint), 0.7) */
+  --note-border-color: #007bff;
+  --grey-border-color: #ccc;
+  --ast-color: #ffc107;
+  --ast-color-005: rgba(255, 193, 7, 0.05);
+  --ast-color-01: rgba(255, 193, 7, 0.1);  
+  --ast-color-03: rgba(255, 193, 7, 0.3);
+  --ast-color-05: rgba(255, 193, 7, 0.5);
+}
+
+/*********************************************
+* Assessments common *
+*********************************************/
+
+div.admonition.assessment {
+  background-color: var(--ast-color-005);
+  border-color: var(--ast-color);
+}
+
+div.assessment p.admonition-title {
+  background-color: var(--ast-color-01);    
+}
+
+div.assessment p.admonition-title::before {
+  background-color: var(--ast-color-01);
+}
+
+div.assessment p.admonition-title::after {
+  content: "\f044";
+  color: var(--ast-color);
+}
+
+div.assessment #question {
+  margin-bottom: 10px;
+}
+
+/*********************************************
+* MChoice *
+*********************************************/
+
+div.mchoice div.buttonspart {
+  margin-top: 5px; 
+}
+
+div.mchoice :is(button.checkbutton, button.resetbutton) {
+  background-color: var(--ast-color-01); 
+  border-color: var(--ast-color-03);  
+  border-radius: 8px;
+}
+
+/*********************************************
+* Dragndrop *
+*********************************************/
+
+div.dragndrop div.dndcontainer {
+    display: flex;
+}
+
+div.dndsourcelist {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+/*    background-color: rgba(var(--pst-color-admonition-hint),0.1); */
+/*    border: 1px solid rgba(var(--pst-color-admonition-hint),0.5); */
+}
+
+div.dndtargetlist {
+    width: 65%;
+    border: 1px solid var(--ast-color-05);
+    margin: 10px;
+    border-radius: 8px;
+/*    background-color: rgba(var(--pst-color-admonition-hint),0.1); */ 
+}
+
+div.dndsourceitem {
+    border: 1px solid var(--ast-color-05);
+    margin: 10px;
+    padding: 3px;
+    border-radius: 8px;
+    background-color: var(--ast-color-01);
+    
+}
+
+div.dndtargetitem {
+    border: 1px solid var(--ast-color-05);
+    margin: 10px;
+    padding: 3px;
+    border-radius: 8px;
+    background-color: var(--ast-color-005);
+}
+
+div.dragndrop :is(button.dndcheckbutton, button.dndresetbutton) {
+  background-color: var(--ast-color-01);
+  border-color: var(--ast-color-03);
+  border-radius: 8px;
+}
+
+/*********************************************
+* Fillintheblank *
+*********************************************/
+
+div.fillintheblank button.fitbcheckbutton {
+  background-color: var(--ast-color-01);
+  border-color: var(--ast-color-03);
+  border-radius: 8px;
+}
+
+/*********************************************
+* Parsons *
+*********************************************/
+
+.parsons-container {
+  display: flex;    
+}
+
+.parsons-source {
+  width: 50%;
+  border: solid 1px red;
+  border-radius: 5px;
+  background-color: LightYellow;
+  margin: 20px;
+  padding: 5px;    
+}
+
+.parsons-item {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 2px;
+    font-family: Courier, monospace;
+    font-size: 15px;
+    background-color: white;
+    grid-column-end: 6;
+}
+
+.parsons-target {
+  width: 50%;
+  border: solid 1px blue;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 5px;
+  background-color: LightYellow;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 40px 40px 40px  1fr 4fr;    
+}
+
+.parsons-column1 {
+  border-right: solid 1px LightGrey;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  z-index: 1;    
+}
+
+.parsons-column2 {
+  border-right: solid 1px LightGrey;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  z-index: 1;     
+}
+
+.parsons-column3 {
+  border-right: solid 1px LightGrey;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  z-index: 1;     
+}
+
+div.parsons button.parsons-checkbutton {
+  background-color: var(--ast-color-01);
+  border-color: var(--ast-color-03);
+  border-radius: 8px;
+}
+
+/*********************************************
+* Shortanswer *
+*********************************************/
+
+div.shortanswer button.sacheckbutton {
+  background-color: var(--ast-color-01);
+  border-color: var(--ast-color-03);  
+  border-radius: 8px;
+}
